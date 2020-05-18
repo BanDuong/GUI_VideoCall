@@ -1,2 +1,2 @@
-# PyQt
-Programming Interface with PyQt5 in Python
+# Tkinter
+Programming Interface with Tkinter in Python
