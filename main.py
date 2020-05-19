@@ -46,43 +46,41 @@ class Application(Frame):
         self.bt_signup.place(x=77, y=100)
 
 
-    def Creat_Sigup(self):
+        def Creat_Sigup(self):
+        top=Toplevel(t)
+        self.frame = top.geometry("300x140+500+180")
+        top.resizable(width=False, height=False)
 
-        t2 = Tk()
-        self.tl2 = t2.title("Sign Up New Account")
-        self.frame = t2.geometry("300x180+460+180")
-        t2.resizable(width=False, height=False)
+        self.lb = Label(top, text="Sign Up", font=("", 14)).pack()
 
-        self.lb = Label(t2, text="Sign Up", font=("", 14)).pack()
-
-        self.lb_acc = Label(t2, text="account: ")  # <p> account
+        self.lb_acc = Label(top, text="account: ")  # <p> account
         self.lb_acc.pack()
         self.lb_acc.place(x=20, y=50)
 
-        self.en_acc = Entry(t2)  # Entry account
+        self.en_acc = Entry(top)  # Entry account
         self.en_acc.pack()
         self.en_acc.place(x=77, y=50)
 
-        self.lb_pass = Label(t2, text="password: ")  # <p> password
+        self.lb_pass = Label(top, text="password: ")  # <p> password
         self.lb_pass.pack()
         self.lb_pass.place(x=20, y=76)
 
-        self.en_pass = Entry(t2,show="*")  # Entry password
+        self.en_pass = Entry(top, show="*")  # Entry password
         self.en_pass.pack()
         self.en_pass.place(x=77, y=76)
 
-        self.lb_conf = Label(t2, text="confirm: ")  # <p> confirm
+        self.lb_conf = Label(top, text="confirm: ")  # <p> confirm
         self.lb_conf.pack()
         self.lb_conf.place(x=20, y=100)
 
-        self.en_conf = Entry(t2,show="*")  # Entry confirm
+        self.en_conf = Entry(top, show="*")  # Entry confirm
         self.en_conf.pack()
         self.en_conf.place(x=77, y=100)
 
-        self.bt_login = Button(t2, text="Submit", font=(13), height=2)  ############### Button Submit
+        self.bt_login = Button(top, text="Submit", font=(13), height=2)  ############### Button Submit
         self.bt_login.pack()
         self.bt_login.place(x=220, y=70)
-
+        
     def Call(self):
 
 
