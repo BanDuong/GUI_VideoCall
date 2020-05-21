@@ -52,7 +52,7 @@ class Application(Frame):
         self.top.resizable(width=False, height=False)
         self.lb2 = Label(self.top, text="--Register--", font=("", 14)).pack()
 
-        self.lb1_acc = Label(self.top, text="account: ")  # <p> account
+        self.lb1_acc = Label(self.top, text="phone: ")  # <p> account
         self.lb1_acc.pack()
         self.lb1_acc.place(x=20, y=50)
 
@@ -77,7 +77,7 @@ class Application(Frame):
         self.en1_conf.pack()
         self.en1_conf.place(x=77, y=100)
 
-        self.lb1_phone = Label(self.top, text="phone: ")  # <p> confirm
+        self.lb1_phone = Label(self.top, text="name: ")  # <p> confirm
         self.lb1_phone.pack()
         self.lb1_phone.place(x=20, y=126)
 
