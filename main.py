@@ -95,17 +95,19 @@ class Application(Frame):
         self.frame = self.lg.geometry("300x140+500+180")
         self.lg.resizable(width=False, height=False)
         self.lb = Label(self.lg, text="CaVid-G4 App", font=("", 14)).pack()
-
-
+        self.lb = Label(self.lg, text="user: {}".format(self.name), font=("", 13)).pack()
 
         self.bt_logout = Button(self.lg, text="Logout", height=3, width=7, command=self.LogOut)
-        self.bt_logout.pack(side="left")
+        self.bt_logout.pack()
+        self.bt_logout.place(x=240,y=85)
 
         self.bt_exit = Button(self.lg, text="Exit", height=3, width=7,command=t.destroy)
-        self.bt_exit.pack(side="right")
+        self.bt_exit.pack()
+        self.bt_exit.place(y=85)
 
         self.bt_call = Button(self.lg, text="Call", height=3,width=7)  ############################################ Button Call
         self.bt_call.pack()
+        self.bt_call.place(x=120,y=85)
 
     def LogOut(self): # Process Logout
         t.deiconify() # show main window again
@@ -131,6 +133,7 @@ class Application(Frame):
                 break
             else:
                 data=infor.split()
+                self.name = data[2]
                 if(self.en_acc.get()==data[0] and self.en_pass.get()==data[1]):
                     self.Interface_Call()
                     break
